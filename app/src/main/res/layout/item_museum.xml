@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MuseumsItemContainerStyle">
+
+    <ImageView
+        android:id="@+id/item_museum_image"
+        style="@style/MuseumsItemImageStyle"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/item_museum_name"
+        style="@style/MuseumsItemNameStyle"
+        android:layout_below="@id/item_museum_image"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

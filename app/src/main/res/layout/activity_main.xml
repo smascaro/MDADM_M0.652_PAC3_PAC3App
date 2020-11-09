@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/DashboardContainerStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/dashboard_top_row"
+        style="@style/DashboardRowStyle.First">
+
+        <LinearLayout
+            android:id="@+id/dashboard_item_maps"
+            style="@style/DashboardItemStyle"
+            android:background="@color/dashboard_item_light_red">
+
+            <ImageView
+                style="@style/DashboardItemImageStyle"
+                android:src="@drawable/ic_world" />
+
+            <TextView
+                style="@style/DashboardItemTitleStyle"
+                android:text="@string/dashboard_item_title_maps" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dashboard_item_museums"
+            style="@style/DashboardItemStyle"
+            android:background="@color/dashboard_item_light_yellow">
+
+            <ImageView
+                style="@style/DashboardItemImageStyle"
+                android:src="@drawable/ic_museum" />
+
+            <TextView
+                style="@style/DashboardItemTitleStyle"
+                android:text="@string/dashboard_item_title_museums" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_mid_row"
+        style="@style/DashboardRowStyle.NotFirst"
+        android:layout_below="@id/dashboard_top_row">
+
+        <LinearLayout
+            android:id="@+id/dashboard_item_contacts"
+            style="@style/DashboardItemStyle"
+            android:background="@color/dashboard_item_green_yellow">
+
+            <ImageView
+                style="@style/DashboardItemImageStyle"
+                android:src="@drawable/ic_personal" />
+
+            <TextView
+                style="@style/DashboardItemTitleStyle"
+                android:text="@string/dashboard_item_title_contacts" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dashboard_item_quizzes"
+            style="@style/DashboardItemStyle"
+            android:background="@color/dashboard_item_green">
+
+            <ImageView
+                style="@style/DashboardItemImageStyle"
+                android:src="@drawable/ic_quizz" />
+
+            <TextView
+                style="@style/DashboardItemTitleStyle"
+                android:text="@string/dashboard_item_title_quizzes" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_bottom_row"
+        style="@style/DashboardRowStyle.NotFirst"
+        android:layout_below="@id/dashboard_mid_row">
+
+        <LinearLayout
+            android:id="@+id/dashboard_item_settings"
+            style="@style/DashboardItemStyle"
+            android:background="@color/dashboard_item_purple">
+
+            <ImageView
+                style="@style/DashboardItemImageStyle"
+                android:src="@drawable/ic_settings" />
+
+            <TextView
+                style="@style/DashboardItemTitleStyle"
+                android:text="@string/dashboard_item_title_settings" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dashboard_item_help"
+            style="@style/DashboardItemStyle"
+            android:background="@color/dashboard_item_light_blue">
+
+            <ImageView
+                style="@style/DashboardItemImageStyle"
+                android:src="@drawable/ic_questions" />
+
+            <TextView
+                style="@style/DashboardItemTitleStyle"
+                android:text="@string/dashboard_item_title_help" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

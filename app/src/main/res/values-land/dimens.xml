@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dashboard_row_height">88dp</dimen>
+    <dimen name="dashboard_row_not_first_margin_top">12dp</dimen>
+    <dimen name="dashboard_outer_padding">16dp</dimen>
+</resources>

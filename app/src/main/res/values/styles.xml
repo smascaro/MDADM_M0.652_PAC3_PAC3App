@@ -1,0 +1,89 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="DashboardContainerStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/dashboard_outer_padding</item>
+    </style>
+
+    <style name="DashboardRowStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dashboard_row_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="DashboardRowStyle.First" parent="DashboardRowStyle" />
+
+    <style name="DashboardRowStyle.NotFirst" parent="DashboardRowStyle">
+        <item name="android:layout_marginTop">@dimen/dashboard_row_not_first_margin_top</item>
+    </style>
+
+    <style name="DashboardItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="DashboardItemImageStyle">
+        <item name="android:layout_width">@dimen/dashboard_item_size</item>
+        <item name="android:layout_height">@dimen/dashboard_item_size</item>
+    </style>
+
+    <style name="DashboardItemTitleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MuseumsItemContainerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/item_museum_container_margin</item>
+        <item name="android:layout_marginRight">@dimen/item_museum_container_margin</item>
+        <item name="android:layout_marginTop">@dimen/item_museum_container_margin</item>
+        <item name="android:background">@color/item_museum_background_color</item>
+    </style>
+
+    <style name="MuseumsItemImageStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/item_museum_image_height</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:contentDescription">@string/item_museum_image_content_description</item>
+    </style>
+
+    <style name="MuseumsItemNameStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">@dimen/item_museum_name_padding</item>
+        <item name="android:textSize">@dimen/item_museum_name_text_size</item>
+    </style>
+
+    <style name="MuseumsErrorImageStyle">
+        <item name="android:layout_width">@dimen/museums_error_image_size</item>
+        <item name="android:layout_height">@dimen/museums_error_image_size</item>
+        <item name="android:src">@drawable/ic_error</item>
+    </style>
+
+    <style name="MuseumsErrorTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/museums_error_text</item>
+        <item name="android:textSize">@dimen/museums_error_text_size</item>
+        <item name="android:contentDescription">@string/museums_error_text</item>
+    </style>
+</resources>
