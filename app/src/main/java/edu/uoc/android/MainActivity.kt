@@ -2,7 +2,6 @@ package edu.uoc.android
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -13,6 +12,11 @@ class MainActivity : AppCompatActivity() {
         dashboard_item_museums.setOnClickListener {
             val museumsActivityIntent = Intent(this, MuseumsActivity::class.java)
             startActivity(museumsActivityIntent)
+        }
+
+        dashboard_item_maps.setOnClickListener {
+            val mapsActivityIntent = Intent(this, MapsActivity::class.java)
+            startActivity(mapsActivityIntent)
         }
     }
 }
