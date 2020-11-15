@@ -41,29 +41,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mapFragment.getMapAsync(this)
     }
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
         mMap.mapType = GoogleMap.MAP_TYPE_TERRAIN
         mMap.uiSettings.isZoomControlsEnabled = true
         mMap.uiSettings.isMyLocationButtonEnabled = true
-        if (ActivityCompat.checkSelfPermission(
-                this,
-                Manifest.permission.ACCESS_FINE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
-                this,
-                Manifest.permission.ACCESS_COARSE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED
-        ) {
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            if (!hasPermission(Manifest.permission.ACCESS_FINE_LOCATION) && !hasPermission(Manifest.permission.ACCESS_COARSE_LOCATION)) {
                 requestPermissions(
                     arrayOf(
                         Manifest.permission.ACCESS_FINE_LOCATION,
@@ -71,21 +55,28 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     ),
                     LOCATION_PERMISSIONS_REQUEST_CODE
                 )
+            } else {
+                loadUserLocation()
             }
-            return
         } else {
             loadUserLocation()
         }
-        mMap.isMyLocationEnabled = true
 
         prepareMarker()
         loadMuseums()
     }
 
+    private fun hasPermission(permission: String): Boolean {
+        return (ActivityCompat.checkSelfPermission(
+            this,
+            permission
+        ) == PackageManager.PERMISSION_GRANTED)
+    }
+
     private fun prepareMarker() {
         val bitmap = BitmapFactory.decodeResource(resources, R.drawable.ic_library)
         markerBitmap =
-            Bitmap.createScaledBitmap(bitmap, MARKER_SIZE.toInt(), MARKER_SIZE.toInt(), false)
+            Bitmap.createScaledBitmap(bitmap, MARKER_SIZE, MARKER_SIZE, false)
     }
 
     private fun loadMuseums() = ui.launch {
@@ -159,14 +150,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     @SuppressLint("MissingPermission")
     private fun loadUserLocation() {
+        mMap.isMyLocationEnabled = true
         val locationProvider = LocationServices.getFusedLocationProviderClient(this)
         locationProvider.lastLocation.addOnSuccessListener {
             if (it != null) {
-                mMap.isMyLocationEnabled = true
                 mMap.moveCamera(
                     CameraUpdateFactory.newLatLngZoom(
                         LatLng(it.latitude, it.longitude),
-                        16f
+                        12f
                     )
                 )
             }
