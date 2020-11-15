@@ -86,4 +86,8 @@
         <item name="android:textSize">@dimen/museums_error_text_size</item>
         <item name="android:contentDescription">@string/museums_error_text</item>
     </style>
+
+    <style name="QuizzRightAnswerTextAppearance">
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

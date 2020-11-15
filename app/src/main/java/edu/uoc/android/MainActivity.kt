@@ -18,5 +18,9 @@ class MainActivity : AppCompatActivity() {
             val mapsActivityIntent = Intent(this, MapsActivity::class.java)
             startActivity(mapsActivityIntent)
         }
+        dashboard_item_quizzes.setOnClickListener {
+            val quizzesActivityIntent = Intent(this, QuizzesActivity::class.java)
+            startActivity(quizzesActivityIntent)
+        }
     }
 }

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "959718786158",
+    "firebase_url": "https://pac3app-ca2be.firebaseio.com",
+    "project_id": "pac3app-ca2be",
+    "storage_bucket": "pac3app-ca2be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959718786158:android:d94f73732ce15e74e3127f",
+        "android_client_info": {
+          "package_name": "edu.uoc.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959718786158-u28585bn58mlvlqlt5ohdu8e6jdo9196.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAf7WZ2Q2LBRZeht700HGcb0tciN7yT2DI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959718786158-u28585bn58mlvlqlt5ohdu8e6jdo9196.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

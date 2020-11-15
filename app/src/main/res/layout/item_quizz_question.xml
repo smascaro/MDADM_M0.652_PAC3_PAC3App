@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/colorAccent"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/colorPrimary"
+    app:strokeWidth="1dp"
+    tools:targetApi="lollipop">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp">
+
+        <TextView
+            android:id="@+id/question_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Question title"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/question_image"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_below="@id/question_title"
+            android:layout_marginVertical="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/michael"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/question_answer_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question_image"
+            android:text="Michael Scott" />
+
+        <TextView
+            android:id="@+id/question_answer_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question_answer_1"
+            android:layout_marginTop="8dp"
+            android:text="Dwight Schrute" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
