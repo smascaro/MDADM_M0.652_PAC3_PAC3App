@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">PAC3App</string>
     <string name="item_museum_image_content_description">Museum image</string>
-    <string name="museums_error_text">Something unexpected happened while loading museums! Tap the image to load again.</string>
+    <string name="loading_error_text">Something unexpected happened while loading data! Tap the image to load again.</string>
     <string name="dashboard_item_title_maps">Maps</string>
     <string name="dashboard_item_title_museums">Museums</string>
     <string name="dashboard_item_title_contacts">Contacts</string>

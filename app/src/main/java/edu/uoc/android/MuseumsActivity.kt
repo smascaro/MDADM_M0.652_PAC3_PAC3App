@@ -1,14 +1,12 @@
 package edu.uoc.android
 
 import android.os.Bundle
-import android.util.Log
-import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import edu.uoc.android.rest.RetrofitFactory
 import kotlinx.android.synthetic.main.activity_museums.*
+import kotlinx.android.synthetic.main.layout_loading_state.*
 import kotlinx.coroutines.*
 
-class MuseumsActivity : AppCompatActivity() {
+class MuseumsActivity : TargetActivity() {
 
     private val ui = CoroutineScope(Dispatchers.Main + Job())
     private val io = CoroutineScope(Dispatchers.IO + Job())
@@ -25,19 +23,19 @@ class MuseumsActivity : AppCompatActivity() {
     }
 
     private fun loadMuseums() = ui.launch {
-        error_container.hide()
-        museums_loading_indicator.show()
+        showError(false)
+        showProgress(true)
         val retrofit = RetrofitFactory.museumAPI
         val museums = try {
             withContext(io.coroutineContext) { retrofit.museums("", "") }
-        } catch (e:Exception){
+        } catch (e: Exception) {
             e.printStackTrace()
             null
         }
         var museumsBound = false
         if (museums?.elements != null) {
             (museums_list.adapter as MuseumsAdapter).bindMuseums(museums.elements!!)
-            museums_loading_indicator.hide()
+            showProgress(false)
             museums_list.show()
             museumsBound = true
         }
@@ -46,14 +44,29 @@ class MuseumsActivity : AppCompatActivity() {
         }
     }
 
+
     private fun notifyError() {
-        museums_loading_indicator.hide()
-        error_container.show()
+        showProgress(false)
+        showError(true)
         error_image.setOnClickListener {
             it.setOnClickListener(null)
-            error_container.hide()
+            showError(false)
             loadMuseums()
         }
-
     }
+
+    private fun showProgress(show: Boolean) {
+        when (show) {
+            true -> loading_indicator.show()
+            false -> loading_indicator.hide()
+        }
+    }
+
+    private fun showError(show: Boolean) {
+        when (show) {
+            true -> error_container.show()
+            false -> error_container.hide()
+        }
+    }
+
 }

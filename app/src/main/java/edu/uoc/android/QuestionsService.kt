@@ -3,6 +3,7 @@ package edu.uoc.android
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 
 object QuestionsService {
@@ -18,17 +19,26 @@ object QuestionsService {
 
     suspend fun getQuestions(): List<QuizzQuestion> {
         return suspendCoroutine { cont ->
-            firestore.collection(COLLECTION_QUESTIONS_KEY).get()
-                .addOnSuccessListener { querySnapshot ->
-                    try {
-                        val questions = querySnapshot.documents.map { it.parseQuestion() }
-                        cont.resume(questions)
-                    } catch (e: Exception) {
-                        cont.resume(listOf())
+            try {
+                firestore.collection(COLLECTION_QUESTIONS_KEY).get()
+                    .addOnSuccessListener { querySnapshot ->
+                        try {
+                            val questions = querySnapshot.documents.map { it.parseQuestion() }
+//                            Preconditions.checkNotEmpty(questions
+//                            if (questions.isNotEmpty()) {
+                            cont.resume(questions)
+//                            } else {
+//                                cont.resumeWithException(IllegalArgumentException("Quizz must not be empty"))
+//                            }
+                        } catch (e: Exception) {
+                            cont.resumeWithException(e)
+                        }
+                    }.addOnFailureListener {
+                        cont.resumeWithException(it)
                     }
-                }.addOnFailureListener {
-                    cont.resume(listOf())
-                }
+            } catch (e: Exception) {
+                cont.resumeWithException(e)
+            }
 
         }
     }

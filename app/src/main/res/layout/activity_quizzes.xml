@@ -7,10 +7,13 @@
     android:background="#eee"
     tools:context=".QuizzesActivity">
 
+    <include layout="@layout/layout_loading_state" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/questions_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_quizz_question" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,6 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -23,7 +22,7 @@ import edu.uoc.android.rest.models.Museums
 import kotlinx.coroutines.*
 import timber.log.Timber
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
+class MapsActivity : TargetActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
     private val ui = CoroutineScope(Dispatchers.Main + Job())

@@ -72,19 +72,19 @@
         <item name="android:textSize">@dimen/item_museum_name_text_size</item>
     </style>
 
-    <style name="MuseumsErrorImageStyle">
+    <style name="LoadErrorImageStyle">
         <item name="android:layout_width">@dimen/museums_error_image_size</item>
         <item name="android:layout_height">@dimen/museums_error_image_size</item>
         <item name="android:src">@drawable/ic_error</item>
     </style>
 
-    <style name="MuseumsErrorTextStyle">
+    <style name="LoadErrorTextStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
-        <item name="android:text">@string/museums_error_text</item>
-        <item name="android:textSize">@dimen/museums_error_text_size</item>
-        <item name="android:contentDescription">@string/museums_error_text</item>
+        <item name="android:text">@string/loading_error_text</item>
+        <item name="android:textSize">@dimen/loading_error_text_size</item>
+        <item name="android:contentDescription">@string/loading_error_text</item>
     </style>
 
     <style name="QuizzRightAnswerTextAppearance">
