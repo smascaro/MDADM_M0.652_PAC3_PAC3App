@@ -1,4 +1,4 @@
-package edu.uoc.android
+package edu.uoc.android.questions
 
 import android.graphics.Typeface
 import android.os.Build
@@ -10,6 +10,8 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.load.resource.bitmap.FitCenter
+import edu.uoc.android.R
+import edu.uoc.android.common.loadFromUrl
 
 class QuizzAdapter : RecyclerView.Adapter<QuizzAdapter.ViewHolder>() {
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {

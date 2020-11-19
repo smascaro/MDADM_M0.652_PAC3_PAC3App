@@ -1,4 +1,4 @@
-package edu.uoc.android
+package edu.uoc.android.museums
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import edu.uoc.android.R
+import edu.uoc.android.common.loadFromUrl
 import edu.uoc.android.rest.models.Element
 
 class MuseumsAdapter : RecyclerView.Adapter<MuseumsAdapter.ViewHolder>() {

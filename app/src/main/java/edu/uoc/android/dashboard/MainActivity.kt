@@ -1,8 +1,12 @@
-package edu.uoc.android
+package edu.uoc.android.dashboard
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import edu.uoc.android.R
+import edu.uoc.android.map.MapsActivity
+import edu.uoc.android.museums.MuseumsActivity
+import edu.uoc.android.questions.QuizzesActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

@@ -1,6 +1,7 @@
-package edu.uoc.android
+package edu.uoc.android.base
 
 import android.app.Application
+import edu.uoc.android.BuildConfig
 import timber.log.Timber
 
 class BaseApplication : Application() {

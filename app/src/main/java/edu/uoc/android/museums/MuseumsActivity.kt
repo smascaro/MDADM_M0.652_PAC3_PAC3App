@@ -1,6 +1,10 @@
-package edu.uoc.android
+package edu.uoc.android.museums
 
 import android.os.Bundle
+import edu.uoc.android.R
+import edu.uoc.android.base.TargetActivity
+import edu.uoc.android.common.hide
+import edu.uoc.android.common.show
 import edu.uoc.android.rest.RetrofitFactory
 import kotlinx.android.synthetic.main.activity_museums.*
 import kotlinx.android.synthetic.main.layout_loading_state.*

@@ -1,4 +1,4 @@
-package edu.uoc.android
+package edu.uoc.android.questions
 
 data class QuizzQuestion(
     val title: String,

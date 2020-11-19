@@ -1,4 +1,4 @@
-package edu.uoc.android
+package edu.uoc.android.map
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -16,6 +16,8 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import edu.uoc.android.R
+import edu.uoc.android.base.TargetActivity
 import edu.uoc.android.rest.RetrofitFactory
 import edu.uoc.android.rest.models.Element
 import edu.uoc.android.rest.models.Museums

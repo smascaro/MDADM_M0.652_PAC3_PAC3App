@@ -1,4 +1,4 @@
-package edu.uoc.android
+package edu.uoc.android.questions
 
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore

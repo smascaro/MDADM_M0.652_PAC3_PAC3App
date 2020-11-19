@@ -1,8 +1,12 @@
-package edu.uoc.android
+package edu.uoc.android.questions
 
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import edu.uoc.android.R
+import edu.uoc.android.base.TargetActivity
+import edu.uoc.android.common.hide
+import edu.uoc.android.common.show
 import kotlinx.android.synthetic.main.activity_quizzes.*
 import kotlinx.android.synthetic.main.layout_loading_state.*
 import kotlinx.coroutines.*

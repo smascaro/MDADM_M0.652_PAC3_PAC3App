@@ -4,7 +4,7 @@
     style="@style/DashboardContainerStyle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".dashboard.MainActivity">
 
     <LinearLayout
         android:id="@+id/dashboard_top_row"

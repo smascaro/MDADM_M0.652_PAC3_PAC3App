@@ -1,4 +1,4 @@
-package edu.uoc.android
+package edu.uoc.android.base
 
 import android.os.Bundle
 import android.view.MenuItem
