@@ -24,12 +24,7 @@ object QuestionsService {
                     .addOnSuccessListener { querySnapshot ->
                         try {
                             val questions = querySnapshot.documents.map { it.parseQuestion() }
-//                            Preconditions.checkNotEmpty(questions
-//                            if (questions.isNotEmpty()) {
                             cont.resume(questions)
-//                            } else {
-//                                cont.resumeWithException(IllegalArgumentException("Quizz must not be empty"))
-//                            }
                         } catch (e: Exception) {
                             cont.resumeWithException(e)
                         }
@@ -39,7 +34,6 @@ object QuestionsService {
             } catch (e: Exception) {
                 cont.resumeWithException(e)
             }
-
         }
     }
 
