@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="maps_marker_size">70dp</dimen>
+    <dimen name="dashboard_row_height">140dp</dimen>
+    <dimen name="dashboard_outer_padding">40dp</dimen>
 </resources>

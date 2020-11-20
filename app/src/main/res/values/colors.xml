@@ -4,11 +4,12 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="colorUoc">#49757e</color>
-    <color name="item_museum_background_color">#ddd</color>
-    <color name="dashboard_item_light_red">#EF5350</color>
-    <color name="dashboard_item_light_yellow">#ffdd66</color>
-    <color name="dashboard_item_green_yellow">#CDDC39</color>
-    <color name="dashboard_item_green">#66BB6A</color>
-    <color name="dashboard_item_purple">#BA68C8</color>
-    <color name="dashboard_item_light_blue">#64B5F6</color>
+    <color name="grey_300">#ddd</color>
+    <color name="dashboard_item_red_400">#EF5350</color>
+    <color name="dashboard_item_yellow_400">#ffdd66</color>
+    <color name="dashboard_item_lime_500">#CDDC39</color>
+    <color name="dashboard_item_green_400">#66BB6A</color>
+    <color name="dashboard_item_purple_300">#BA68C8</color>
+    <color name="dashboard_item_blue_300">#64B5F6</color>
+    <color name="grey_200">#eee</color>
 </resources>

@@ -11,4 +11,11 @@
     <dimen name="loading_error_text_size">18sp</dimen>
     <dimen name="dashboard_row_not_first_margin_top">24dp</dimen>
     <dimen name="maps_marker_size">40dp</dimen>
+    <dimen name="item_quizz_container_margin">8dp</dimen>
+    <dimen name="item_quizz_container_corner_radius">12dp</dimen>
+    <dimen name="item_quizz_container_inner_margin">12dp</dimen>
+    <dimen name="item_quizz_question_title_text_size">18sp</dimen>
+    <dimen name="item_quizz_image_height">200dp</dimen>
+    <dimen name="item_quizz_image_margin_vertical">16dp</dimen>
+    <dimen name="item_quizz_answer2_margin_top">8dp</dimen>
 </resources>

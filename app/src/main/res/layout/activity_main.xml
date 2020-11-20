@@ -13,7 +13,7 @@
         <LinearLayout
             android:id="@+id/dashboard_item_maps"
             style="@style/DashboardItemStyle"
-            android:background="@color/dashboard_item_light_red">
+            android:background="@color/dashboard_item_red_400">
 
             <ImageView
                 style="@style/DashboardItemImageStyle"
@@ -27,7 +27,7 @@
         <LinearLayout
             android:id="@+id/dashboard_item_museums"
             style="@style/DashboardItemStyle"
-            android:background="@color/dashboard_item_light_yellow">
+            android:background="@color/dashboard_item_yellow_400">
 
             <ImageView
                 style="@style/DashboardItemImageStyle"
@@ -47,7 +47,7 @@
         <LinearLayout
             android:id="@+id/dashboard_item_contacts"
             style="@style/DashboardItemStyle"
-            android:background="@color/dashboard_item_green_yellow">
+            android:background="@color/dashboard_item_lime_500">
 
             <ImageView
                 style="@style/DashboardItemImageStyle"
@@ -61,7 +61,7 @@
         <LinearLayout
             android:id="@+id/dashboard_item_quizzes"
             style="@style/DashboardItemStyle"
-            android:background="@color/dashboard_item_green">
+            android:background="@color/dashboard_item_green_400">
 
             <ImageView
                 style="@style/DashboardItemImageStyle"
@@ -81,7 +81,7 @@
         <LinearLayout
             android:id="@+id/dashboard_item_settings"
             style="@style/DashboardItemStyle"
-            android:background="@color/dashboard_item_purple">
+            android:background="@color/dashboard_item_purple_300">
 
             <ImageView
                 style="@style/DashboardItemImageStyle"
@@ -95,7 +95,7 @@
         <LinearLayout
             android:id="@+id/dashboard_item_help"
             style="@style/DashboardItemStyle"
-            android:background="@color/dashboard_item_light_blue">
+            android:background="@color/dashboard_item_blue_300">
 
             <ImageView
                 style="@style/DashboardItemImageStyle"

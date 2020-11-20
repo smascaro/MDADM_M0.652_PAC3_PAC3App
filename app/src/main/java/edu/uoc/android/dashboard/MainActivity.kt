@@ -7,6 +7,7 @@ import edu.uoc.android.R
 import edu.uoc.android.map.MapsActivity
 import edu.uoc.android.museums.MuseumsActivity
 import edu.uoc.android.questions.QuizzesActivity
+import edu.uoc.android.settings.SettingsActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +26,10 @@ class MainActivity : AppCompatActivity() {
         dashboard_item_quizzes.setOnClickListener {
             val quizzesActivityIntent = Intent(this, QuizzesActivity::class.java)
             startActivity(quizzesActivityIntent)
+        }
+        dashboard_item_settings.setOnClickListener {
+            val settingsActivityIntent = Intent(this, SettingsActivity::class.java)
+            startActivity(settingsActivityIntent)
         }
     }
 }

@@ -54,7 +54,7 @@
         <item name="android:layout_marginLeft">@dimen/item_museum_container_margin</item>
         <item name="android:layout_marginRight">@dimen/item_museum_container_margin</item>
         <item name="android:layout_marginTop">@dimen/item_museum_container_margin</item>
-        <item name="android:background">@color/item_museum_background_color</item>
+        <item name="android:background">@color/grey_300</item>
     </style>
 
     <style name="MuseumsItemImageStyle">
@@ -85,6 +85,51 @@
         <item name="android:text">@string/loading_error_text</item>
         <item name="android:textSize">@dimen/loading_error_text_size</item>
         <item name="android:contentDescription">@string/loading_error_text</item>
+    </style>
+
+    <style name="QuizzScreenContainerStyle">
+        <item name="android:background">@color/grey_200</item>
+    </style>
+
+    <style name="QuizzItemContainerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/item_quizz_container_margin</item>
+        <item name="android:layout_marginRight">@dimen/item_quizz_container_margin</item>
+        <item name="android:layout_marginTop">@dimen/item_quizz_container_margin</item>
+        <item name="cardCornerRadius">@dimen/item_quizz_container_corner_radius</item>
+    </style>
+
+    <style name="QuizzItemInnerContainerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">@dimen/item_quizz_container_inner_margin</item>
+    </style>
+
+    <style name="QuizzItemQuestionTitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/item_quizz_question_title_text_size</item>
+    </style>
+
+    <style name="QuizzItemQuestionImageStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/item_quizz_image_height</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">@dimen/item_quizz_image_margin_vertical</item>
+        <item name="android:layout_marginBottom">@dimen/item_quizz_image_margin_vertical</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="QuizzItemQuestionAnswer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="QuizzItemQuestionAnswer.First" parent="QuizzItemQuestionAnswer" />
+
+    <style name="QuizzItemQuestionAnswer.Second" parent="QuizzItemQuestionAnswer">
+        <item name="android:layout_marginTop">@dimen/item_quizz_answer2_margin_top</item>
     </style>
 
     <style name="QuizzRightAnswerTextAppearance">

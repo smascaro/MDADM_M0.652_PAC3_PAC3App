@@ -30,9 +30,7 @@
         <ImageView
             android:id="@+id/error_image"
             style="@style/LoadErrorImageStyle"
-            android:clickable="true"
-            android:layout_centerHorizontal="true"
-            android:focusable="true" />
+            android:layout_centerHorizontal="true" />
 
         <TextView
             android:id="@+id/error_text"

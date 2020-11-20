@@ -1,10 +1,10 @@
 package edu.uoc.android.base
 
-import android.app.Application
+import androidx.multidex.MultiDexApplication
 import edu.uoc.android.BuildConfig
 import timber.log.Timber
 
-class BaseApplication : Application() {
+class BaseApplication : MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
         if (BuildConfig.DEBUG) {
